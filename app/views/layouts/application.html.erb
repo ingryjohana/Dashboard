@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+ <nav class="navbar">
+  <div class="container-fluid">
+  <div class="navbar-header">
+  	<%=link_to "INDEX", staticpag_index_url, {:class=>"navbar-brand" } %>
+  </div>
+    
+    <ul class="nav navbar-nav">
+      
+      <li><%=link_to "DataBase", staticpag_database_url, {:class=>"colornav" }  %></li>
+      <li><%=link_to "History", staticpag_history_url, {:class=>"colornav" }  %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<footer>
+  <%= image_tag (footer/in.jpg) do%>
+</footer>
+    <%= yield %>
+  </body>
+</html>
